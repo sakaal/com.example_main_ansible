@@ -5,6 +5,9 @@ This is a configuration management database (CMDB)
 for tracking configuration items (CIs) specific to
 an operational instance of an online managed service.
 
+See: [Service infrastructure configuration repository][1]
+[1]: https://github.com/sakaal/service_infra_ansible
+
 ## Current implementation
 
 This Git repository contains Ansible inventories for
