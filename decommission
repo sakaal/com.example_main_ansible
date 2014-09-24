@@ -7,12 +7,20 @@
 
 [managed_servers:children]
 libvirt_hosts
+ex_libvirt_hosts
 
 #
 # Add the IP address of each hypervisor that is running any guests
-# to be decommissioned. The hypervisors themselves will remain active.
+# to be decommissioned. The hypervisors in this group will remain active.
 #
 [libvirt_hosts]
+#203.0.113.1
+
+#
+# Add the IP address of each hypervisor host that will be terminated.
+# This will securely erase storage devices used for service data.
+#
+[ex_libvirt_hosts]
 #203.0.113.1
 
 #
