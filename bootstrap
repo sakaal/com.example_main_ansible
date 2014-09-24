@@ -12,11 +12,11 @@
 [managed_servers:children]
 libvirt_hosts
 #libvirt_guests_host.example.com
+available_servers
 
 #
 # Add the IP address of each dedicated server (physical machine) that
-# has a minimal operating system already installed
-# by the hosting provider's standard method.
+# will be configured as a hypervisor.
 #
 [libvirt_hosts]
 #203.0.113.1
@@ -27,10 +27,24 @@ libvirt_hosts
 # You may add more groups to provision different sets of guests on different
 # hypervisors.
 #
-# The guest subdomains are assumed to be a local naming policy on the
-# hypervisor host. Guest names are not registered in DNS, but only
-# configured for local name resolution on the hypervisor.
+# The guest subdomains are a local naming policy on the hypervisor host.
+# Guest SSHFP records are registered in the management DNS zone, but only
+# configured for local name resolution accessible from the hypervisor.
 #
 
 [libvirt_guests_host.example.com]
 #guest.host.example.com
+
+#
+# The reset_servers will be automatically moved to the available_servers group
+# unless they have already been assigned to some other group above. 
+#
+[available_servers]
+
+#
+# Add the IP address of each dedicated server (physical machine) that you
+# want erased and reinstalled. All data on these servers will be destroyed
+# when the reset_servers.yml playbook is run.
+#
+[reset_servers]
+#203.0.113.1
