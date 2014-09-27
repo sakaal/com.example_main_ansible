@@ -1,0 +1,33 @@
+#
+# Bastion Hosts
+#
+# The bastion host configuration is only accepted from a known repository host.
+#
+# Location and key of the bastion host self-configuration repository:
+#
+#bastion_inventory_repo_hostnames:
+#- bitbucket.org
+#- 131.103.20.167
+#- 131.103.20.168
+#bastion_inventory_repo_host_key: "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAubiN81eDcafrgMeLzaFPsw2kNvEcqTKl/VqLat/MaB33pZy0y3rJZtnqwR2qOOvbwKZYKiEO1O6VqNEBxKvJJelCq0dTXWT5pbO2gDXC6h6QDXCaHo6pOHGPUy+YBaGQRGuSusMEASYiWunYN0vCAI8QaXnWMXNMdFP3jHAJH0eDsoiGnLPBlBp4TNm6rYI74nMzgz3B9IikW4WVK+dc8KZJZWYjAuORU3jc1c/NPskD2ASinf8v3xnfXeukU0sJ5N6m5E8VLjObPEO+mN2t/FZTMZLiFqPWc/ALSqnMnnhwrNi2rbfg/rd/IpL8Le3pSBne8+seeFVBoGqzHM9yXw=="
+#bastion_inventory_repo_service: "git@bitbucket.org:johndoe"
+#bastion_inventory_repo_name: "com.example_bastion_ansible"
+
+#
+# Pull the bastion playbook repository from a trusted source under your control.
+#
+bastion_playbook_repo: "https://github.com/sakaal/bastion_ansible.git"
+
+#
+# The bastion deployment key is an SSH key that has read-only access to the
+# bastion configuration repository. The same key is deployed on all bastion
+# hosts.
+#
+# Generate the key as usual with:
+# ssh-keygen -N '' -C 'com.example_bastion_deployment_2014-09-27' -f /mnt/sensitive_data/com.example/com.example_bastion_deployment_2014-09-27_id_rsa
+#
+# Add the generated public key as a read-only deployment key
+# to the bastion self-configuration repository.
+#
+#bastion_deployment_key_dir: /mnt/sensitive_data/com.example
+#bastion_deployment_key_filename: com.example_bastion_deployment-2014-09-27_id_rsa
