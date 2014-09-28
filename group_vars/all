@@ -1,4 +1,23 @@
 #
+# Gnu Privacy Guard
+#
+# You must add the service administrators' GnuPG keys in your local keyring
+# before applying roles/gnupg_keys.
+#
+# The following GnuPG public keys will be ultimately trusted on the bastion
+# hosts. Bastion configuration inventory repository commits must have been
+# signed with a trusted key for the bastion host self-configuration process
+# to accept them.
+#
+# The key creation date is only used in file names to help distinguish between
+# multiple keys of the otherwise same user identity.
+#
+gnupg_trusted_keys:
+#- id:      "johndoe@example.com"
+#  fp:      "72663A1352859084EB495BA5E8EB6FA9A9034779"
+#  created: "2002-11-20"
+
+#
 # Bastion Hosts
 #
 # The bastion host configuration is only accepted from a known repository host.
