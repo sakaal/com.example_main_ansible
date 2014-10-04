@@ -1,6 +1,10 @@
 #
 # Gnu Privacy Guard
 #
+# The list of trusted GPG keys is also the authoritative list of service
+# administrators. Additional details are required for administrative contact
+# purposes.
+#
 # You must add the service administrators' GnuPG keys in your local keyring
 # before applying roles/gnupg_keys.
 #
@@ -9,13 +13,19 @@
 # signed with a trusted key for the bastion host self-configuration process
 # to accept them.
 #
+# Both the name and the email must appear in the GPG key user ID string.
+#
 # The key creation date is only used in file names to help distinguish between
 # multiple keys of the otherwise same user identity.
 #
-gnupg_trusted_keys:
-#- id:      "johndoe@example.com"
-#  fp:      "72663A1352859084EB495BA5E8EB6FA9A9034779"
-#  created: "2002-11-20"
+trusted_gpg_public_keys:
+
+#- name:        "John Doe"
+#  email:       "johndoe@example.com"
+#  phone:       "+13109976224"
+#  location:    "California, USA"
+#  fingerprint: "72663A1352859084EB495BA5E8EB6FA9A9034779"
+#  created:     "2002-11-20"
 
 #
 # Bastion Hosts
@@ -33,20 +43,44 @@ gnupg_trusted_keys:
 #bastion_inventory_repo_name: "com.example_bastion_ansible"
 
 #
-# Pull the bastion playbook repository from a trusted source under your control.
-#
-bastion_playbook_repo: "https://github.com/sakaal/bastion_ansible.git"
-
-#
 # The bastion deployment key is an SSH key that has read-only access to the
 # bastion configuration repository. The same key is deployed on all bastion
 # hosts.
 #
 # Generate the key as usual with:
-# ssh-keygen -N '' -C 'com.example_bastion_deployment_2014-09-27' -f /mnt/sensitive_data/com.example/com.example_bastion_deployment_2014-09-27_id_rsa
+# ssh-keygen -N '' -C 'com.example_bastion_deployment_2014-09-27'\
+#  -f /mnt/sensitive_data/bastion/com.example_bastion_deployment_2014-09-27_id_rsa
 #
 # Add the generated public key as a read-only deployment key
 # to the bastion self-configuration repository.
 #
-#bastion_deployment_key_dir: /mnt/sensitive_data/com.example
+#bastion_deployment_key_dir: /mnt/sensitive_data/bastion
 #bastion_deployment_key_filename: com.example_bastion_deployment-2014-09-27_id_rsa
+
+#
+# Pull the bastion playbook repository from a trusted source under your control.
+#
+bastion_playbook_repo: "https://github.com/sakaal/bastion_ansible.git"
+
+#
+# Backup service keys
+#
+backup_service_public_key: |
+  -----BEGIN PUBLIC KEY-----
+  DUMMYjANBgkqhkiG9w0BAQEFEXAMPLEAMIIBCgKCAQEAxRXr5VDUMMY+k16YGS5D
+  QwRPmDUMMYV/5sY02nbGBYvm2Jno8JFqdXuL9R/YzK+8iDUMMYQ9fZoDUMMYb29B
+  V1XBCdXRJpDUMMYPYRRPs5w6jrMfIn2zdzvkRUOrDUMMYteXm4gWmI2ZAldMDUMM
+  jb4PHpASg/AwKoNDUMMY8CAyxqEY0b2Tn5oDUMMYyDe3jw/+g4jEXAMPLEWkBCd/
+  C4uh8Bl+7OJKVTCPcziYDUMMYJ86tvDUMMYo1RmIpUFyhDrqfylwbtQdRT0uYkd0
+  YscXT88UcEXAMPLElWVbJfbm7DUMMYYLBTbd2KMgLBJK0oXtD88ZGuaEXAMPLEDs
+  bwIDAQAB
+  -----END PUBLIC KEY-----
+
+#
+# Certificate Authorities
+#
+trusted_ca_certificates:
+# CAcert.org is only given as an example. Decide which CAs to trust.
+#- url: http://www.cacert.org/certs/root.crt
+#  filename: root.crt
+#  sha256sum: c0e0773a79dceb622ef6410577c19c1e177fb2eb9c623a49340de3c9f1de2560
