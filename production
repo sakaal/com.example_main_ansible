@@ -3,3 +3,7 @@
 #
 # Service Operation main inventory
 #
+
+[artifact_servers]
+
+[web_servers]

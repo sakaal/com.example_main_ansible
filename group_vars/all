@@ -63,9 +63,9 @@ trusted_gpg_public_keys:
 bastion_playbook_repo: "https://github.com/sakaal/bastion_ansible.git"
 
 #
-# Backup service keys
+# Archives keys
 #
-backup_service_public_key: |
+archives_public_key: |
   -----BEGIN PUBLIC KEY-----
   DUMMYjANBgkqhkiG9w0BAQEFEXAMPLEAMIIBCgKCAQEAxRXr5VDUMMY+k16YGS5D
   QwRPmDUMMYV/5sY02nbGBYvm2Jno8JFqdXuL9R/YzK+8iDUMMYQ9fZoDUMMYb29B
