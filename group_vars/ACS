@@ -43,4 +43,4 @@ app_data_to_restore:
 #- app_db: "sonatype_nexus_oss"
 #  before: "2014-10-07 00:00Z"
 #  client: "guest.host.example.com"
-#  status: "Recovery completed on 2014-10-08 11:12:13Z by Sakari Maaranen."
+#  status: "Recovery completed on 2014-10-08 11:12:13Z by John Doe."
