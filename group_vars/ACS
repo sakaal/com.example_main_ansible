@@ -1,0 +1,46 @@
+---
+# file: group_vars/ACS
+#
+# Variables for operations to be executed on an Administrative Client System
+#
+
+#
+# Application data recovery from the archives
+#
+# Retrieval of 'safe password files' for application data archives to restore
+#
+# service_platform_ansible/roles/app_data_restore_1
+#
+# Give the application data archive label in 'app_db'.
+#
+# The point in time 'before' is expressed in UTC, ISO 8601 date (and time)
+# at the precision of a calendar month, day, hour or minute. A lower precision
+# timestamp will be interpreted by finding the last available restore point
+# within the given range. An exact match is included, so the precise meaning
+# is 'at or before'.
+#
+# The 'client' hostname is given in the fully-qualified form (FQDN).
+#
+# As a double entry safety mechanism, the 'prefix' must be set to match the
+# above values with: "{{ app_db }}_{{ client }}_{{ before }}"
+#
+# The system will automatically replace the prefix with the completion status
+# after the data has been restored. If the same operation needs to be repeated,
+# the service administrator must manually reset the prefix.
+#
+# Commit and sign the configuration changes with the service administrator's
+# GPG key. This makes a permanent record of the operation in the service main
+# CMDB. You can safely remove old entries, which have been previously committed.
+# The revision control keeps the history.
+#
+app_data_to_restore:
+#
+#- app_db: "jenkins_ci"
+#  before: "2014-10-07T18:32"
+#  client: "guest.host.example.com"
+#  prefix: "jenkins_ci_guest.host.example.com_2014-10-07T18:32"
+#
+#- app_db: "sonatype_nexus_oss"
+#  before: "2014-10-07 00:00Z"
+#  client: "guest.host.example.com"
+#  status: "Recovery completed on 2014-10-08 11:12:13Z by Sakari Maaranen."
