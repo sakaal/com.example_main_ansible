@@ -87,3 +87,8 @@ trusted_ca_certificates:
 #- url: http://www.cacert.org/certs/root.crt
 #  filename: root.crt
 #  sha256sum: c0e0773a79dceb622ef6410577c19c1e177fb2eb9c623a49340de3c9f1de2560
+
+#
+# Country code for network mirrors etc.
+#
+network_country_code: de
