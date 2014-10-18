@@ -1,0 +1,23 @@
+#
+# Sonatype Nexus OSS
+#
+# roles/sonatype_nexus_oss
+#
+nexus_version: 2.10.0-02
+nexus_md5sum: 356ef1b9cc214798558e73e4d34ee9cd
+#
+# Nexus REST API base URL corresponds to the HTTP reverse proxy in front of it.
+#
+nexus_rest_api_base_url: "https://{{ public_hostname | mandatory }}"
+#
+# Nexus SMTP over TLS port 587
+#
+# Set the SMTP configuration in:
+# /mnt/sensitive_data/etc/ansible/vars/admin_access.yml
+#
+#nexus_smtp_hostname: smtp.gmail.com
+#nexus_smtp_port: 587
+#nexus_smtp_tls: true
+#nexus_smtp_username: root@example.com
+#nexus_smtp_password: "{PGMJ37WTmgLDyQAbDUMMYPASSWORDHASHPGMJ37WTmgLDyQAb}"
+#nexus_system_email: root@example.com
