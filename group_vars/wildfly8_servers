@@ -26,6 +26,20 @@ postgresql_jdbc_drivers:
   xa_datasource_class: org.postgresql.xa.PGXADataSource
 
 #
+# roles/wildfly8_mail
+#
+# If any of the mail servers requires a password, set the javamail_resources in:
+# /mnt/sensitive_data/etc/ansible/vars/admin_access.yml
+#
+#javamail_resources:
+#- name: Example
+#  smtp_host: localhost
+#  smtp_port: 587
+#  user: webmaster
+#  password: ''
+#  from: webmaster@example.com
+
+#
 # roles/wildfly8_logging
 #
 #wildfly8_loggers:
