@@ -13,3 +13,14 @@ wildfly8_sha256sum: 719dc074ace7320dee52ccdd8e3b41beda038f2f09d69af085273d4f00a7
 #
 #wildfly8_user: wildfly
 #wildfly8_password: "TBh+DUMMY7+uzP0I"
+
+#
+# roles/wildfly8_postgresql_drivers
+#
+postgresql_jdbc_drivers:
+- version: 9.3
+  build: 1102
+  spec: jdbc41
+  sha256sum: b78749d536da75c382d0a71c717cde6850df64e16594676fc7cacb5a74541d66
+  module: org.postgresql
+  xa_datasource_class: org.postgresql.xa.PGXADataSource
