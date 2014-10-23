@@ -24,3 +24,14 @@ postgresql_jdbc_drivers:
   sha256sum: b78749d536da75c382d0a71c717cde6850df64e16594676fc7cacb5a74541d66
   module: org.postgresql
   xa_datasource_class: org.postgresql.xa.PGXADataSource
+
+#
+# roles/wildfly8_logging
+#
+#wildfly8_loggers:
+#- category: org.jboss.security
+#  level: TRACE
+#- category: org.jboss.web.tomcat.security
+#  level: TRACE
+#- category: org.apache.catalina
+#  level: TRACE
