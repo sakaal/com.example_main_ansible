@@ -34,22 +34,15 @@ postgresql_jdbc_drivers:
   xa_datasource_class: org.postgresql.xa.PGXADataSource
 
 #
-# roles/wildfly8_datasources
+# Read service_platform_ansible/roles/wildfly8_datasources/defaults
 #
 # Set the database name, user name and password per application environment.
 #
 #wildfly8_datasources:
 #- name: ExampleDS
-#  driver_name: "postgresql-{{ postgresql_jdbc_drivers[0].version|mandatory
-#               }}-{{ postgresql_jdbc_drivers[0].build|mandatory
-#               }}.{{ postgresql_jdbc_drivers[0].spec|mandatory }}"
 #  connection_url: "jdbc:postgresql://db1:5432/{{ postgresql_db_name }}"
 #  user_name: "{{ postgresql_user }}"
 #  password:  "{{ postgresql_password }}"
-#  use_ccm: true
-#  max_pool_size: 25
-#  blocking_timeout_wait_millis: 5000
-#  new_connection_sql: "SET datestyle TO ISO,European;"
 
 #
 # roles/wildfly8_mail
