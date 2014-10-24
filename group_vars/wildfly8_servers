@@ -2,6 +2,14 @@
 # file: group_vars/wildfly8_servers
 
 #
+# roles/hosts_aliases
+#
+#hosts_aliases:
+#- ip: '127.0.1.1' # assuming that the database is on the localhost
+#  names:
+#  - 'db1'
+
+#
 # roles/wildfly8
 #
 wildfly8_version: 8.1.0.Final
@@ -24,6 +32,24 @@ postgresql_jdbc_drivers:
   sha256sum: b78749d536da75c382d0a71c717cde6850df64e16594676fc7cacb5a74541d66
   module: org.postgresql
   xa_datasource_class: org.postgresql.xa.PGXADataSource
+
+#
+# roles/wildfly8_datasources
+#
+# Set the database name, user name and password per application environment.
+#
+#wildfly8_datasources:
+#- name: ExampleDS
+#  driver_name: "postgresql-{{ postgresql_jdbc_drivers[0].version|mandatory
+#               }}-{{ postgresql_jdbc_drivers[0].build|mandatory
+#               }}.{{ postgresql_jdbc_drivers[0].spec|mandatory }}"
+#  connection_url: "jdbc:postgresql://db1:5432/{{ postgresql_db_name }}"
+#  user_name: "{{ postgresql_user }}"
+#  password:  "{{ postgresql_password }}"
+#  use_ccm: true
+#  max_pool_size: 25
+#  blocking_timeout_wait_millis: 5000
+#  new_connection_sql: "SET datestyle TO ISO,European;"
 
 #
 # roles/wildfly8_mail
