@@ -3,9 +3,12 @@
 #
 # DNS zones to be created via the Managed DNS provider API are listed here
 # by their default DNS A record IP address. This allows contacting the zone
-# default nodes already before DNS is configured for them.
+# default nodes already before DNS is configured for them. The nodes don't
+# have to exist yet though as long as the IP address is already reserved.
+#
 # Give only one default node per zone.
 #
 
 [zone_defaults]
-#203.0.113.1
+#203.0.113.1  # management domain name
+#203.0.113.24 # public service domain name
