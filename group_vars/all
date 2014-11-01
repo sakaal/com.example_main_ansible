@@ -31,17 +31,23 @@ trusted_gpg_public_keys:
 #  created:     "2002-11-20"
 
 #
+# SSH known hosts
+#
+ssh_known_hosts:
+
+- hosts: # the bastion host self-configuration repository
+  - bitbucket.org
+  - 131.103.20.167
+  - 131.103.20.168
+  key: "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAubiN81eDcafrgMeLzaFPsw2kNvEcqTKl/VqLat/MaB33pZy0y3rJZtnqwR2qOOvbwKZYKiEO1O6VqNEBxKvJJelCq0dTXWT5pbO2gDXC6h6QDXCaHo6pOHGPUy+YBaGQRGuSusMEASYiWunYN0vCAI8QaXnWMXNMdFP3jHAJH0eDsoiGnLPBlBp4TNm6rYI74nMzgz3B9IikW4WVK+dc8KZJZWYjAuORU3jc1c/NPskD2ASinf8v3xnfXeukU0sJ5N6m5E8VLjObPEO+mN2t/FZTMZLiFqPWc/ALSqnMnnhwrNi2rbfg/rd/IpL8Le3pSBne8+seeFVBoGqzHM9yXw=="
+
+#
 # Bastion Hosts
 #
 # The bastion host configuration is only accepted from a known repository host.
 #
-# Location and key of the bastion host self-configuration repository:
+# Location of the bastion host self-configuration repository:
 #
-#bastion_inventory_repo_hostnames:
-#- bitbucket.org
-#- 131.103.20.167
-#- 131.103.20.168
-#bastion_inventory_repo_host_key: "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAubiN81eDcafrgMeLzaFPsw2kNvEcqTKl/VqLat/MaB33pZy0y3rJZtnqwR2qOOvbwKZYKiEO1O6VqNEBxKvJJelCq0dTXWT5pbO2gDXC6h6QDXCaHo6pOHGPUy+YBaGQRGuSusMEASYiWunYN0vCAI8QaXnWMXNMdFP3jHAJH0eDsoiGnLPBlBp4TNm6rYI74nMzgz3B9IikW4WVK+dc8KZJZWYjAuORU3jc1c/NPskD2ASinf8v3xnfXeukU0sJ5N6m5E8VLjObPEO+mN2t/FZTMZLiFqPWc/ALSqnMnnhwrNi2rbfg/rd/IpL8Le3pSBne8+seeFVBoGqzHM9yXw=="
 #bastion_inventory_repo_service: "git@bitbucket.org:johndoe"
 #bastion_inventory_repo_name: "com.example_bastion_ansible"
 
@@ -87,6 +93,15 @@ trusted_ca_certificates:
 #- url: http://www.cacert.org/certs/root.crt
 #  filename: root.crt
 #  sha256sum: c0e0773a79dceb622ef6410577c19c1e177fb2eb9c623a49340de3c9f1de2560
+
+intermediate_ca_certificates:
+# StartSSL Class 2 intermediate certificate is only given as an example.
+#- url: http://www.startssl.com/certs/sub.class2.server.ca.pem
+#  filename: sub.class2.server.ca.pem
+#  sha256sum: a1e3fce6f35dd202922de85d38b18d582667242b8c8c7c6f443a5b691ce8cbe7
+
+#tls_certificate_chain_file:
+#  "{{ (intermediate_ca_certificates.0|mandatory).filename }}"
 
 #
 # Country code for network mirrors etc.
