@@ -1,7 +1,7 @@
-# file: production
+# file: development
 
 #
-# Service Operation main inventory
+# Service Design main inventory
 #
 [libvirt_hosts]
 
@@ -9,16 +9,19 @@
 libvirt_hosts
 mail_servers
 web_servers
-directory_servers
+artifact_servers
+ci_servers
 database_servers
-diaspora_servers
+wildfly8_servers
 
 [mail_servers]
 
 [web_servers]
 
-[directory_servers]
+[artifact_servers]
+
+[ci_servers]
 
 [database_servers]
 
-[diaspora_servers]
+[wildfly8_servers]

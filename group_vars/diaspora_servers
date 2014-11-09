@@ -1,0 +1,23 @@
+---
+# file: group_vars/diaspora_servers
+
+#
+# roles/diaspora_pods
+#
+# Set the following variables in:
+# /mnt/sensitive_data/etc/ansible/vars/admin_access.yml
+#
+#diaspora_db_username: 'diaspora_user'
+#diaspora_db_password: 'udADUMMYxDEXAMPLEO+iqclP'
+#
+diaspora_db_host: 'db1'
+
+#diaspora_uploads_host: 'guest.host.example.com'
+
+#
+# roles/hosts_aliases
+#
+hosts_aliases:
+  - ip:    '192.168.122.1'
+    names:
+    - "{{ diaspora_db_host|mandatory }}"
