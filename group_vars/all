@@ -93,9 +93,21 @@ trusted_ca_certificates:
 #- url: http://www.cacert.org/certs/root.crt
 #  filename: root.crt
 #  sha256sum: c0e0773a79dceb622ef6410577c19c1e177fb2eb9c623a49340de3c9f1de2560
+#
+# StartSSL SHA-256 CA certificate
+#- url: https://www.startssl.com/certs/ca-sha2.pem
+#  filename: ca-sha2.pem
+#  sha256sum: d7cd8bebde97ac2a4c8499193e90c1ef323a142e18a4353f557f258712352208
 
 intermediate_ca_certificates:
-# StartSSL Class 2 intermediate certificate is only given as an example.
+# StartSSL intermediate certificates are only given as an example.
+#
+# StartSSL Class 2 SHA-256 intermediate certificate
+#- url: https://www.startssl.com/certs/class2/sha2/pem/sub.class2.server.sha2.ca.pem
+#  filename: sub.class2.server.sha2.ca.pem
+#  sha256sum: ad20be6d0af5cfa7eab0df3deb8206df69be191ab92cad4bea89f5fedc6321b6
+#
+# StartSSL Class 2 SHA-1 intermediate certificate
 #- url: http://www.startssl.com/certs/sub.class2.server.ca.pem
 #  filename: sub.class2.server.ca.pem
 #  sha256sum: a1e3fce6f35dd202922de85d38b18d582667242b8c8c7c6f443a5b691ce8cbe7
