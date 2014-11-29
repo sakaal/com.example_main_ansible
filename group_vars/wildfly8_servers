@@ -40,9 +40,9 @@ postgresql_jdbc_drivers:
 #
 #wildfly8_datasources:
 #- name: ExampleDS
-#  connection_url: "jdbc:postgresql://db1:5432/{{ postgresql_db_name }}"
-#  user_name: "{{ postgresql_user }}"
-#  password:  "{{ postgresql_password }}"
+#  connection_url: "jdbc:postgresql://db1:5432/example_db"
+#  user_name: "example_user"
+#  password:  "abcDUMMY123"
 
 #
 # roles/wildfly8_mail
