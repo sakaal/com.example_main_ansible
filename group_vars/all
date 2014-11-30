@@ -80,6 +80,8 @@ ssh_known_hosts:
 #
 bastion_playbook_repo: "https://github.com/sakaal/bastion_ansible.git"
 
+continuous_delivery_playbook_repo: "https://github.com/sakaal/continuous_delivery_ansible.git"
+
 #
 # Archives keys
 #
