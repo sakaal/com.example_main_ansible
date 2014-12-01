@@ -2,6 +2,16 @@
 # file: group_vars/wildfly8_servers
 
 #
+# roles/access_control
+#
+ssh_access:
+# Allow the continuous integration server 'jenkins' user to manage the nodes.
+#- user: "{{ admin_username | mandatory }}"
+#  authorized_keys:
+#  - key: "ssh-rsa AAAAB3NzaCEXAMPLEBAAAAJqPFDUMMYLDcm...E0EXAMPLETSxbqT934vd3b920DUMMYjndMLEXAMD9 jenkins@ci.host.example.com-2014-11-14T19:22:31Z"
+#    state: present
+
+#
 # roles/hosts_aliases
 #
 #hosts_aliases:
