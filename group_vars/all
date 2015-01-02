@@ -113,6 +113,11 @@ trusted_ca_certificates:
 intermediate_ca_certificates:
 # StartSSL intermediate certificates are only given as an example.
 #
+# StartSSL Class 4 Extended Validation SHA-256 certificate
+#- url: http://www.startssl.com/certs/class4/sha2/pem/sub.ev.server.sha2.ca.pem
+#  filename: sub.ev.server.sha2.ca.pem
+#  sha256sum: fa33709d4f890d1d7699365df1766aa6a4202a0735b17b64e298b5103a07ef89
+#
 # StartSSL Class 2 SHA-256 intermediate certificate
 #- url: https://www.startssl.com/certs/class2/sha2/pem/sub.class2.server.sha2.ca.pem
 #  filename: sub.class2.server.sha2.ca.pem
