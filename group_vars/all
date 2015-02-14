@@ -115,7 +115,7 @@ intermediate_ca_certificates:
 # StartSSL intermediate certificates are only given as an example.
 #
 # StartSSL Class 4 Extended Validation SHA-256 certificate
-#- url: http://www.startssl.com/certs/class4/sha2/pem/sub.ev.server.sha2.ca.pem
+#- url: https://www.startssl.com/certs/class4/sha2/pem/sub.ev.server.sha2.ca.pem
 #  filename: sub.ev.server.sha2.ca.pem
 #  sha256sum: 732e7353e9fe843ca490ad26747bd0b8bd13de772522c4727b8572115b234532
 #
@@ -124,10 +124,10 @@ intermediate_ca_certificates:
 #  filename: sub.class2.server.sha2.ca.pem
 #  sha256sum: 702bcb6f6aaf8cc812f7de218776b1a716e090b18d6ab8ea3e20db7604caef77
 #
-# StartSSL Class 2 SHA-1 intermediate certificate
-#- url: http://www.startssl.com/certs/sub.class2.server.ca.pem
+# StartSSL Class 2 intermediate certificate
+#- url: https://www.startssl.com/certs/sub.class2.server.ca.pem
 #  filename: sub.class2.server.ca.pem
-#  sha256sum: ad20be6d0af5cfa7eab0df3deb8206df69be191ab92cad4bea89f5fedc6321b6
+#  sha256sum: 702bcb6f6aaf8cc812f7de218776b1a716e090b18d6ab8ea3e20db7604caef77
 
 #tls_certificate_chain_file:
 #  "{{ (intermediate_ca_certificates.0|mandatory).filename }}"
