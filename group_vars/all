@@ -57,6 +57,7 @@ ssh_known_hosts:
 #
 # Location of the bastion host self-configuration repository:
 #
+#bastion_inventory_repo_hostnames: "{{ ssh_known_hosts.0.hosts | mandatory | list }}"
 #bastion_inventory_repo_service: "git@bitbucket.org:johndoe"
 #bastion_inventory_repo_name: "com.example_bastion_ansible"
 
