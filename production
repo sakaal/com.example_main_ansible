@@ -22,3 +22,5 @@ diaspora_servers
 [database_servers]
 
 [diaspora_servers]
+
+[diaspora_uploads_hosts]
