@@ -58,9 +58,14 @@ postgresql_jdbc_drivers:
 #
 #wildfly8_datasources:
 #- name: ExampleDS
-#  connection_url: "jdbc:postgresql://db1:5432/example_db"
-#  user_name: "example_user"
-#  password:  "abcDUMMY123"
+#  driver_type: postgresql
+#  driver_name: "postgresql-{{ postgresql_jdbc_drivers.0.version }}-{{ postgresql_jdbc_drivers.0.build }}.{{ postgresql_jdbc_drivers.0.spec }}"
+#  xa_datasource_class: org.postgresql.xa.PGXADataSource
+#  host: db1
+#  port: 5432
+#  database: example_db
+#  user_name: example_user
+#  password: "abcDUMMY123"
 
 #
 # roles/wildfly8_mail
