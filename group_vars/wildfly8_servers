@@ -37,8 +37,15 @@ wildfly8_sha256sum: bf16e2be38fd1476b0e8a0b038f7d41d7ab525fc96c2a1077338814b7442
 #
 postgresql_jdbc_drivers:
 - version: 9.3
+  build: 1103
+  spec: jdbc41
+  sha256sum: 5a4334bb296a88385fad1d6bd22b63c0f33997154533827bc37daaa8cd96c3de
+  module: org.postgresql
+  xa_datasource_class: org.postgresql.xa.PGXADataSource
+- version: 9.3
   build: 1102
   spec: jdbc41
+  state: absent
   sha256sum: b78749d536da75c382d0a71c717cde6850df64e16594676fc7cacb5a74541d66
   module: org.postgresql
   xa_datasource_class: org.postgresql.xa.PGXADataSource
