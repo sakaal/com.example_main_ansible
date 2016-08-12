@@ -1,5 +1,5 @@
+# file: group_vars/all/main.yml
 ---
-# file: group_vars/all
 
 #
 # Gnu Privacy Guard
