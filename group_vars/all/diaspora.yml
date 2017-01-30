@@ -1,1 +1,8 @@
-/mnt/sensitive_data/etc/ansible/vars/diaspora.yml
+# file: group_vars/all/diaspora.yml
+#
+# ansible-vault encrypt this file
+#
+---
+#diaspora_db_name: 'diaspora_db'
+#diaspora_db_username: 'diaspora_user'
+#diaspora_db_password: 'dAuDUMMYxDEXAMPLEO+iqPlc'

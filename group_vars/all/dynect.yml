@@ -1,1 +1,10 @@
-/mnt/sensitive_data/etc/ansible/vars/dynect.yml
+# file: group_vars/all/dynect.yml
+#
+# ansible-vault encrypt this file
+#
+# DNS management access credentials
+#
+---
+#dynect_customer: None
+#dynect_api_user: None
+#dynect_api_password: None

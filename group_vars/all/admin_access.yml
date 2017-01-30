@@ -1,1 +1,81 @@
-/mnt/sensitive_data/etc/ansible/vars/admin_access.yml
+# file: group_vars/all/admin_access.yml
+#
+# ansible-vault encrypt this file
+#
+---
+
+#
+# Configuration management access
+#
+# Set the admin_username separate from the root user account
+# and use a randomly chosen high admin_ssh_port.
+# Keep these private to service administration.
+#
+#admin_username: 
+#admin_fullname: Ansible
+#admin_email: root@example.com
+#admin_ssh_port: 54321
+#admin_authorized_keys:
+#  - "ssh-rsa AAAA...EXAMPLE...= johndoe@example.com_2017-01-30T193700Z"
+
+# On CentOS or Fedora, use: grub2-mkpasswd-pbkdf2
+#host_bootpw_pbkdf2: grub.pbkdf2.sha512.10000.0123456789ABCDEF.0123456789ABCDEF
+
+# On CentOS, use: grub-crypt --sha-512
+# Change the root password immediately at first login. Generated 2017-01-30.
+#guest_rootpw_sha512: $6$0123456789ABCDEF.0123456789ABCDEF
+
+# On CentOS or Fedora, use: grub2-mkpasswd-pbkdf2
+#guest_bootpw_pbkdf2: grub.pbkdf2.sha512.10000.0123456789ABCDEF.0123456789ABCDEF
+
+#
+# OpenLDAP
+#
+# Generate the root password using slappasswd.
+#
+#ldap_root_password: "{SSHA}ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+#ldap_bind_suffix: dc=example,dc=com
+#ldap_bind_dn: uid=wildfly,ou=people,dc=example,dc=com
+#ldap_bind_credential: TESTDUMMY
+
+#
+# Sonatype Nexus OSS
+#
+# Use: java -jar shiro-tools-hasher-1.2.3-cli.jar -p -aSHA-512
+#
+#nexus_admin_password: $shiro1$SHA-512$500000$0123456789ABCDEF=
+#nexus_admin_email: "Nexus admin \\&lt;root@example.com\\&gt;"
+#nexus_deployment_password: $shiro1$SHA-512$500000$ABCDEFG$HIJKLMNOP=
+#nexus_deployment_email: "Nexus deployment \\&lt;root@example.com\\&gt;"
+#
+# Generate the Nexus SMTP password hash by entering it first via the web console
+# Administration / Server. After saving, you can find the hashed password in
+# sonatype-work/nexus/conf/nexus.xml inside smtpConfiguration near the end.
+#
+#nexus_smtp_hostname: example.com
+#nexus_smtp_port: 587
+#nexus_smtp_tls: true
+#nexus_smtp_username: nexus
+#nexus_smtp_password: "{ABCDEFGHIJKLMNOPQRSTUVWXYZ}"
+#nexus_system_email: nexus@example.com
+
+#secrets:
+#  example:
+#    nexus_password: "$6$rounds=60000$ABCDEF..GHI$KLMNOPQRSTUV"
+
+#
+# Jenkins CI
+#
+#jenkins_smtp_hostname: smtp.gmail.com
+#jenkins_smtp_port: "587"
+#jenkins_smtp_ssl: "false"
+#jenkins_smtp_tls: "true"
+#jenkins_smtp_username: root@example.com
+#jenkins_smtp_password: "0123456789ABCDEF="
+#jenkins_system_email: root@example.com
+
+#
+# WildFly 8 Java EE Application Server
+#
+wildfly8_user: wildfly
+wildfly8_password: "0123456789ABCDEFG"
