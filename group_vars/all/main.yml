@@ -130,7 +130,7 @@ intermediate_ca_certificates:
 #  sha256sum: 702bcb6f6aaf8cc812f7de218776b1a716e090b18d6ab8ea3e20db7604caef77
 
 #tls_certificate_chain_file:
-#  "{{ (intermediate_ca_certificates.0|mandatory).filename }}"
+#  "/etc/pki/tls/certs/{{ (intermediate_ca_certificates.0|mandatory).filename }}"
 
 #
 # Country code for network mirrors etc.
