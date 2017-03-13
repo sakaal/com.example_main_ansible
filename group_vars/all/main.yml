@@ -1,86 +1,6 @@
 # file: group_vars/all/main.yml
 ---
 
-#
-# Gnu Privacy Guard
-#
-# The list of trusted GPG keys is also the authoritative list of service
-# administrators. Additional details are required for administrative contact
-# purposes.
-#
-# You must add the service administrators' GnuPG keys in your local keyring
-# before applying roles/gnupg_keys.
-#
-# The following GnuPG public keys will be ultimately trusted on the bastion
-# hosts. Bastion configuration inventory repository commits must have been
-# signed with a trusted key for the bastion host self-configuration process
-# to accept them.
-#
-# Both the name and the email must appear in the GPG key user ID string.
-#
-# The key creation date is only used in file names to help distinguish between
-# multiple keys of the otherwise same user identity.
-#
-trusted_gpg_public_keys:
-
-#- name:        "John Doe"
-#  email:       "johndoe@example.com"
-#  phone:       "+13109976224"
-#  location:    "California, USA"
-#  fingerprint: "72663A1352859084EB495BA5E8EB6FA9A9034779"
-#  created:     "2002-11-20"
-
-#
-# SSH known hosts
-#
-ssh_known_hosts:
-# Bitbucket.org and GitHub are given as examples. Decide which services to use.
-#
-#- hosts: # the bastion host self-configuration repository
-#  - bitbucket.org
-#  - 131.103.20.167
-#  - 131.103.20.168
-#  key: "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAubiN81eDcafrgMeLzaFPsw2kNvEcqTKl/VqLat/MaB33pZy0y3rJZtnqwR2qOOvbwKZYKiEO1O6VqNEBxKvJJelCq0dTXWT5pbO2gDXC6h6QDXCaHo6pOHGPUy+YBaGQRGuSusMEASYiWunYN0vCAI8QaXnWMXNMdFP3jHAJH0eDsoiGnLPBlBp4TNm6rYI74nMzgz3B9IikW4WVK+dc8KZJZWYjAuORU3jc1c/NPskD2ASinf8v3xnfXeukU0sJ5N6m5E8VLjObPEO+mN2t/FZTMZLiFqPWc/ALSqnMnnhwrNi2rbfg/rd/IpL8Le3pSBne8+seeFVBoGqzHM9yXw=="
-#
-#- hosts:
-#  - github.com
-#  - 192.30.252.128
-#  - 192.30.252.129
-#  - 192.30.252.130
-#  - 192.30.252.131
-#  key: "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAq2A7hRGmdnm9tUDbO9IDSwBK6TbQa+PXYPCPy6rbTrTtw7PHkccKrpp0yVhp5HdEIcKr6pLlVDBfOLX9QUsyCOV0wzfjIJNlGEYsdlLJizHhbn2mUjvSAHQqZETYP81eFzLQNnPHt4EVVUh7VfDESU84KezmD5QlWpXLmvU31/yMf+Se8xhHTvKSCZIFImWwoG6mbUoWf9nzpIoaSjB+weqqUUmpaaasXVal72J+UX2B+2RPW3RcT0eOzQgqlJL3RKrTJvdsjE3JEAvGq3lGHSZXy28G3skua2SmVi/w4yCE6gbODqnTWlg7+wC604ydGXA8VJiS5ap43JXiUFFAaQ=="
-
-#
-# Bastion Hosts
-#
-# The bastion host configuration is only accepted from a known repository host.
-#
-# Location of the bastion host self-configuration repository:
-#
-#bastion_inventory_repo_hostnames: "{{ ssh_known_hosts.0.hosts | mandatory | list }}"
-#bastion_inventory_repo_service: "git@bitbucket.org:johndoe"
-#bastion_inventory_repo_name: "com.example_bastion_ansible"
-
-#
-# The bastion deployment key is an SSH key that has read-only access to the
-# bastion configuration repository. The same key is deployed on all bastion
-# hosts.
-#
-# Generate the key as usual with:
-# ssh-keygen -N '' -C 'com.example_bastion_deployment_2014-09-27'\
-#  -f /mnt/sensitive_data/bastion/com.example_bastion_deployment_2014-09-27_id_rsa
-#
-# Add the generated public key as a read-only deployment key
-# to the bastion self-configuration repository.
-#
-#bastion_deployment_key_dir: /mnt/sensitive_data/bastion
-#bastion_deployment_key_filename: com.example_bastion_deployment-2014-09-27_id_rsa
-
-#
-# Pull the bastion playbook repository from a trusted source under your control.
-#
-bastion_playbook_repo: "https://github.com/sakaal/bastion_ansible.git"
-
 continuous_delivery_playbook_repo: "https://github.com/sakaal/continuous_delivery_ansible.git"
 
 #
@@ -130,7 +50,7 @@ intermediate_ca_certificates:
 #  sha256sum: 702bcb6f6aaf8cc812f7de218776b1a716e090b18d6ab8ea3e20db7604caef77
 
 #tls_certificate_chain_file:
-#  "/etc/pki/tls/certs/{{ (intermediate_ca_certificates.0|mandatory).filename }}"
+#  "/etc/pki/tls/certs/{{ intermediate_ca_certificates[0].filename }}"
 
 #
 # Country code for network mirrors etc.
