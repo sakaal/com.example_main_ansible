@@ -1,4 +1,4 @@
-# file: group_vars/all/hetzner.yml
+# file: group_vars/all/hetzner.yaml
 #
 # ansible-vault encrypt this file
 #

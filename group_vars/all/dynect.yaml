@@ -1,4 +1,4 @@
-# file: group_vars/all/dynect.yml
+# file: group_vars/all/dynect.yaml
 #
 # ansible-vault encrypt this file
 #

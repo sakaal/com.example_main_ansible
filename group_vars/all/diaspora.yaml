@@ -1,4 +1,4 @@
-# file: group_vars/all/diaspora.yml
+# file: group_vars/all/diaspora.yaml
 #
 # ansible-vault encrypt this file
 #

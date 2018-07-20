@@ -27,7 +27,7 @@ wildfly8_sha256sum: bf16e2be38fd1476b0e8a0b038f7d41d7ab525fc96c2a1077338814b7442
 
 #
 # Set the following variables in:
-# /mnt/sensitive_data/etc/ansible/vars/admin_access.yml 
+# group_vars/all/admin_access.yaml 
 #
 #wildfly8_user: wildfly
 #wildfly8_password: "TBh+DUMMY7+uzP0I"
@@ -71,7 +71,7 @@ postgresql_jdbc_drivers:
 # roles/wildfly8_mail
 #
 # If any of the mail servers requires a password, set the javamail_resources in:
-# /mnt/sensitive_data/etc/ansible/vars/admin_access.yml
+# group_vars/all/admin_access.yaml
 #
 #javamail_resources:
 #- name: Example

@@ -1,4 +1,4 @@
-# file: group_vars/all/tls.yml
+# file: group_vars/all/tls.yaml
 #
 # Transport Layer Security (TLS) for all services
 #

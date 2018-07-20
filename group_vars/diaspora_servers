@@ -1,11 +1,11 @@
----
 # file: group_vars/diaspora_servers
+---
 
 #
 # roles/diaspora_pods
 #
 # Set the following variables in:
-# /mnt/sensitive_data/etc/ansible/vars/admin_access.yml
+# group_vars/all/admin_access.yaml
 #
 #diaspora_db_username: 'diaspora_user'
 #diaspora_db_password: 'udADUMMYxDEXAMPLEO+iqclP'

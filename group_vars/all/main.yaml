@@ -1,4 +1,4 @@
-# file: group_vars/all/main.yml
+# file: group_vars/all/main.yaml
 ---
 
 continuous_delivery_playbook_repo: "https://github.com/sakaal/continuous_delivery_ansible.git"

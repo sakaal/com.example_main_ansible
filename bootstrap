@@ -1,9 +1,9 @@
 # file: bootstrap
-
 #
 # Hosts in the bootstrap inventory are in the process of being installed
 # and prepared for use.
 #
+---
 
 #
 # Managed servers are configured for unattended administrative access.

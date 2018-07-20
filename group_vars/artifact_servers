@@ -13,7 +13,7 @@ nexus_rest_api_base_url: "https://{{ public_hostname | mandatory }}"
 # Nexus SMTP over TLS port 587
 #
 # Set the SMTP configuration in:
-# /mnt/sensitive_data/etc/ansible/vars/admin_access.yml
+# group_vars/all/admin_access.yaml
 #
 #nexus_smtp_hostname: smtp.gmail.com
 #nexus_smtp_port: 587

@@ -1,4 +1,4 @@
-# file: group_vars/all/admin_access.yml
+# file: group_vars/all/admin_access.yaml
 #
 # ansible-vault encrypt this file
 #

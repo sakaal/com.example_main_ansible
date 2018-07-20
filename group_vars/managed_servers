@@ -1,5 +1,5 @@
----
 # file: group_vars/managed_servers
+---
 
 #
 # Managed servers are configured for unattended administrative access.
@@ -8,7 +8,7 @@
 
 #
 # Set the configuration management access credentials in:
-# /mnt/sensitive_data/etc/ansible/vars/admin_access.yml
+# group_vars/all/admin_access.yaml
 #
 ansible_ssh_port: "{{ admin_ssh_port | mandatory }}"
 ansible_ssh_user: "{{ admin_username | mandatory }}"

@@ -1,4 +1,4 @@
-# file: group_vars/all/bastion.yml
+# file: group_vars/all/bastion.yaml
 ---
 
 #
