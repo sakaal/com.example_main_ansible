@@ -1,0 +1,4 @@
+# file: group_vars/all/vault_id.yaml
+---
+
+inventory_vault_id: "example_18"

@@ -1,0 +1,51 @@
+# file: group_vars/mail_servers/email.yaml
+---
+
+#
+# roles/postfix_standalone
+#
+email_aliases:
+- user: root
+  alias: "{{ admin_username }}"
+- user: abuse
+  alias: "root"
+- user: apache
+  alias: "webmaster"
+- user: hostmaster
+  alias: "root"
+- user: info
+  alias: "postmaster"
+- user: dovecot
+  alias: "postmaster"
+- user: manager
+  alias: "root"
+- user: marketing
+  alias: "postmaster"
+- user: named
+  alias: "hostmaster"
+- user: webmaster
+  alias: "root"
+- user: postfix
+  alias: "postmaster"
+- user: postmaster
+  alias: "root"
+- user: sales
+  alias: "postmaster"
+- user: security
+  alias: "root"
+- user: support
+  alias: "postmaster"
+- user: system
+  alias: "root"
+- user: webalizer
+  alias: "webmaster"
+- user: webmaster
+  alias: "root"
+- user: www
+  alias: "webmaster"
+
+postfix_lookup_tables:
+- name: "relay_recipients"
+- name: "restricted_clients"
+  type: "cidr"
+- name: "designated_recipients"

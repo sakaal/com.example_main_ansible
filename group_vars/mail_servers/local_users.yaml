@@ -1,0 +1,13 @@
+# file: group_vars/mail_servers/local_users.yaml
+#
+# Service user accounts for sending and receiving mail
+#
+---
+
+local_users:
+#
+- user: "jenkins"
+  fullname: "Jenkins CI"
+  email: "jenkins@example.com"
+  password: "{{ vault_local_users.jenkins.password }}"
+  state: present
