@@ -1,0 +1,9 @@
+# file: group_vars/libvirt_hosts/main.yaml
+---
+
+#
+# Please use the CentOS and EPEL mirrors nearest to your server.
+#
+centos_repo_url: "http://username:password@download.hetzner.de/mirrors/centos/7/os/x86_64/"
+centos_repo_key_file: RPM-GPG-KEY-CentOS-7
+centos_repo_key_sha256: 8b48b04b336bd725b9e611c441c65456a4168083c4febc28e88828d8ec14827f
