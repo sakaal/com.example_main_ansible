@@ -2,6 +2,13 @@
 ---
 
 #
+# Name of the inventory group for guests that will be
+# provisioned on each hypervisor host.
+#
+libvirt_guests_group: "libvirt_guests_{{ inventory_hostname }}"
+
+
+#
 # Please use the CentOS and EPEL mirrors nearest to your server.
 #
 centos_repo_url: "http://username:password@download.hetzner.de/mirrors/centos/7/os/x86_64/"
