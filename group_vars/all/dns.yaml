@@ -1,0 +1,8 @@
+# file: group_vars/all/dns.yaml
+---
+
+dns_zone: example.com
+dns_soa_rname: "hostmaster@{{ dns_zone }}"
+dns_soa_ttl: 3600
+#dynect_dnssec_contact_nickname: {{ dynect_api_user }}
+#dynect_dnssec_notify_events: create,expire,warning
