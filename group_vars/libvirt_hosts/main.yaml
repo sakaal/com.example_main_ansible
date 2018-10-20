@@ -17,8 +17,7 @@ target_ansible_group: libvirt_hosts
 # Name of the inventory group for guests that will be
 # provisioned on each hypervisor host.
 #
-libvirt_guests_group: "libvirt_guests_{{ inventory_hostname }}"
-
+libvirt_guests_group: "libvirt_guests_{{ hostname | default(inventory_hostname) }}"
 
 #
 # Please use the CentOS and EPEL mirrors nearest to your server.
